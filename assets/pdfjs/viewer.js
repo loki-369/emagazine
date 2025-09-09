@@ -7361,10 +7361,10 @@ function webViewerInitialized() {
   var params = parseQueryString(queryString);
   var file = 'file' in params ? params.file : DEFAULT_URL;
   var initialScaleValue = isMobileDevice() ? 'page-width' : DEFAULT_SCALE_VALUE;
-  // Adjust the default scale for mobile devices
-  if (isMobileDevice()) {
-      DEFAULT_SCALE_VALUE = 'page-width';
-  }
+  // Change default scale for mobile devices
+if (isMobileDevice()) {
+    DEFAULT_SCALE_VALUE = 'page-width';
+}
 
   var fileInput = document.createElement('input');
   fileInput.id = 'fileInput';
