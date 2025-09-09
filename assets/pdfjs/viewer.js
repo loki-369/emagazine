@@ -1,6 +1,10 @@
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 'use strict';
 // Change name here #45646865656C20476F6174
-var DEFAULT_URL =  "assets/pdf/MAGAZINE.pdf";
+var DEFAULT_URL =  "assets/pdf/magazine.pdf";
 var DEFAULT_SCALE_DELTA = 1.1;
 var MIN_SCALE = 0.25;
 var MAX_SCALE = 10.0;
@@ -7356,6 +7360,10 @@ function webViewerInitialized() {
   var queryString = document.location.search.substring(1);
   var params = parseQueryString(queryString);
   var file = 'file' in params ? params.file : DEFAULT_URL;
+  // Adjust the default scale for mobile devices
+  if (isMobileDevice()) {
+      DEFAULT_SCALE_VALUE = 'page-width';
+  }
 
   var fileInput = document.createElement('input');
   fileInput.id = 'fileInput';
