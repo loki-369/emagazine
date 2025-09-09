@@ -1,4 +1,11 @@
+[build]
+  publish = "."
+
+[build.environment]
+  # Disable Netlify's image optimization
+  NETLIFY_IMAGE_CDN = "false"
+
 [[plugins]]
   package = "@netlify/plugin-image-cdn"
   [plugins.inputs]
-    image_quality = 100
+    disable = true

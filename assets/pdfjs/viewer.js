@@ -7359,8 +7359,14 @@ function webViewerLoad(evt) {
 function webViewerInitialized() {
   var queryString = document.location.search.substring(1);
   var params = parseQueryString(queryString);
-  var file = 'file' in params ? params.file : DEFAULT_URL;
-  var initialScaleValue = isMobileDevice() ? 'page-width' : DEFAULT_SCALE_VALUE;
+var file = 'file' in params ? params.file : DEFAULT_URL;
+
+// Override the default scale for mobile devices
+if (isMobileDevice()) {
+    PDFViewerApplication.pdfViewer.currentScaleValue = 'page-width';
+} else {
+    PDFViewerApplication.pdfViewer.currentScaleValue = DEFAULT_SCALE_VALUE;
+}  var initialScaleValue = isMobileDevice() ? 'page-width' : DEFAULT_SCALE_VALUE;
   // Change default scale for mobile devices
 if (isMobileDevice()) {
     DEFAULT_SCALE_VALUE = 'page-width';
