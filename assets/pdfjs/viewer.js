@@ -1,6 +1,6 @@
 'use strict';
 // Change name here #45646865656C20476F6174
-var DEFAULT_URL =  "assets/pdf/magazine.pdf";
+var DEFAULT_URL =  "assets/pdf/MAGAZINE.pdf";
 var DEFAULT_SCALE_DELTA = 1.1;
 var MIN_SCALE = 0.25;
 var MAX_SCALE = 10.0;

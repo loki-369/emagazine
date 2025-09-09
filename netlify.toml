@@ -1,0 +1,4 @@
+[[plugins]]
+  package = "@netlify/plugin-image-cdn"
+  [plugins.inputs]
+    image_quality = 100
