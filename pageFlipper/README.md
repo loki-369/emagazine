@@ -3,9 +3,7 @@
 Welcome to the online flipbook version of our magazine 🎉  
 
 ## 🌐 Live Demo
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge&logo=vercel)](https://your-hosting-link.com)
-
----
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green?style=for-the-badge&logo=github)](https://loki-369.github.io/emagazine/)
 
 
 ## 📂 1. Uploading PDF
